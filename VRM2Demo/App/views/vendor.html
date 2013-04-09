@@ -1,0 +1,70 @@
+﻿<section>
+    <!-- TODO Add back button 
+    <div class="tabbable">        
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+            <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+                <p>I'm in Section 1.</p>
+            </div>
+            <div class="tab-pane" id="tab2">
+                <p>Howdy, I'm in Section 2.</p>
+            </div>
+        </div>
+    </div> -->
+
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#tabGeneral" data-toggle="tab">General</a></li>
+        <li><a href="#tabDocuments" data-toggle="tab">Documents</a></li>
+        <li><a href="#tabContacts" data-toggle="tab">Contacts</a></li>
+        <li><a href="#tabPhotos" data-toggle="tab">Photos</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tabGeneral">
+            <form class="form-horizontal" data-bind="submit: generalTab.updateGeneralInfo">
+                <div class="control-group">
+                    <label class="control-label" for="vendorId">Id</label>
+                    <div class="controls">
+                        <span class="uneditable-input" id="vendorId" data-bind="text: vendor.id"></span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="vendorId">Logo</label>
+                    <div class="controls">
+                        <img data-bind="attr:{src: vendor.pathToLogo}" class="img-polaroid" />
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputVendorName">Name</label>
+                    <div class="controls">
+                        <input type="text" id="inputVendorName" data-bind="value: vendor.name">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputActivity">Activity</label>
+                    <div class="controls">
+                        <select id="inputActivity" data-bind="options: generalTab.activities, value: generalTab.selectedActivity, optionsCaption: 'Choose...'"></select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn">Save</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="tab-pane" id="tabDocuments">
+            <p>Howdy, I'm in Section 2.</p>
+        </div>
+        <div class="tab-pane" id="tabContacts">
+            <p>Howdy, I'm in Section 3.</p>
+        </div>
+        <div class="tab-pane" id="tabPhotos">
+            <p>Howdy, I'm in Section 4.</p>
+        </div>
+    </div>
+</section>

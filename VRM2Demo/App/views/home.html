@@ -1,0 +1,52 @@
+﻿<section>
+    <!--<h2 class="page-title" data-bind="text: title"></h2>-->
+    <div class="row-fluid">
+        <div class="span6">                
+            <form class="form-horizontal" data-bind="submit: search">
+                <div class="control-group">
+                    <label class="control-label" for="companyName">Name</label>
+                    <div class="controls">
+                        <input type="text" id="companyName" placeholder="Some name" data-bind="value: name">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="companyList">Company</label>
+                    <div class="controls">
+                        <select id="companyList" data-bind="options: companies, value: selectedCompany, optionsCaption: 'Choose...'"></select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="activityList">Activity</label>
+                    <div class="controls">
+                        <select id="activityList" data-bind="options: activities, value: selectedActivity, optionsCaption: 'Choose...'"></select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn"><i class="icon-search"></i>Search</button>
+                    </div>
+                </div>    
+            </form>
+        </div>
+        <div class="span6">
+            <table id="searchResult" class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Id</th>
+                        <th>Activity</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody id="searchResultBody" data-bind="foreach: searchResults">                    
+                    <tr>
+                        <td><a data-bind="attr: { href: '#/vendor/' + id() }">View</a></td>
+                        <td data-bind="text: id"></td>
+                        <td data-bind="text: activity"></td>
+                        <td data-bind="text: name"></td>
+                    </tr>                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

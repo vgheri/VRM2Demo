@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="VRM2Demo.MvcApplication" Language="C#" %>
